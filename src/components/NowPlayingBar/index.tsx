@@ -2,20 +2,17 @@ import "./styles.css";
 
 export const NowPlayingBar: React.FC = () => {
   return (
-    <main className="now-playing-bar flex-1 bg-gray-800 text-white p-6">
-      <h2 className="text-2xl font-bold mb-4">Featured Playlists</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {[...Array(8)].map((_, index) => (
-          <div
-            key={index}
-            className="bg-gray-700 rounded-lg p-4 hover:bg-gray-600 transition"
-          >
-            <div className="h-40 bg-gray-600 rounded mb-4"></div>
-            <h3 className="text-lg font-semibold">Playlist {index + 1}</h3>
-            <p className="text-sm text-gray-300">Description goes here</p>
-          </div>
-        ))}
+    <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-blue-700 to-purple-700 py-3 px-4 flex justify-between items-center">
+      <div>
+        <h3 className="font-bold text-sm">Testar o Premium de graça</h3>
+        <p className="text-xs">
+          Inscreva-se para curtir música ilimitada e podcasts só com alguns
+          anúncios. Não precisa de cartão de crédito.
+        </p>
       </div>
-    </main>
+      <button className="bg-white text-black font-bold py-2 px-6 rounded-full hover:scale-105 transition-transform">
+        Inscrever-se grátis
+      </button>
+    </div>
   );
 };

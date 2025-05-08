@@ -7,10 +7,10 @@ import "./styles.css";
 
 export const Header: React.FC = () => {
   return (
-    <header className="global-nav bg-black text-white shadow-md relative h-[64px]">
+    <header className="global-nav bg-black text-white shadow-md relative h-[64px] flex items-center">
       <div className="mx-auto flex justify-between items-center w-full">
         <div className="flex items-center space-x-4">
-          <Logo classNames="ml-5" />
+          <Logo classNames="ml-7" />
 
           <div className="flex items-center max-w-[546px] w-full">
             <IconButton label="" classNames="ml-3">
@@ -31,7 +31,7 @@ export const Header: React.FC = () => {
             />
           </div>
         </div>
-        <nav className="gap-2 h-[48] justify-center items-center flex">
+        <nav className="gap-2 h-[48] justify-center items-center flex mr-2">
           <HeaderLink
             href="https://www.spotify.com/pt-pt/premium/"
             label="Premium"
