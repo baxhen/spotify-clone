@@ -1,5 +1,6 @@
 .global-nav {
   grid-area: global-nav;
+  margin: calc(var(--panel-gap) * -1);
 }
 
 .link-button {

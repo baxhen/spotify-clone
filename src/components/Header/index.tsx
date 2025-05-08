@@ -7,7 +7,7 @@ import "./styles.css";
 
 export const Header: React.FC = () => {
   return (
-    <header className="global-nav bg-black text-white p-2 shadow-md relative">
+    <header className="global-nav bg-black text-white shadow-md relative h-[64px]">
       <div className="mx-auto flex justify-between items-center w-full">
         <div className="flex items-center space-x-4">
           <Logo classNames="ml-5" />
