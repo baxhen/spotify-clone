@@ -1,6 +1,7 @@
 import { Logo } from "@spotify/app/components/Logo";
 import { IconButton } from "@spotify/app/components/IconButton";
-import { SearchInput } from "../SearchInput";
+import { SearchInput } from "@spotify/app/components/SearchInput";
+import { HeaderLink } from "@spotify/app/components/HeaderLink";
 
 import "./styles.css";
 
@@ -31,24 +32,20 @@ export const Header: React.FC = () => {
           </div>
         </div>
         <nav className="gap-2 h-[48] justify-center items-center flex">
-          <a
-            href="#"
-            className="hover:scale-[1.04] font-bold text-base text-[#b3b3b3] hover:text-white transition-colors duration-220 ease-in-out"
-          >
-            Premium
-          </a>
-          <a
-            href="#"
-            className="hover:scale-[1.04] font-bold text-base text-[#b3b3b3] hover:text-white transition-colors duration-220 ease-in-out"
-          >
-            Suporte
-          </a>
-          <a
-            href="#"
-            className="hover:scale-[1.04] font-bold text-base text-[#b3b3b3] hover:text-white transition-colors duration-220 ease-in-out"
-          >
-            Baixar
-          </a>
+          <HeaderLink
+            href="https://www.spotify.com/pt-pt/premium/"
+            label="Premium"
+          />
+
+          <HeaderLink
+            href="https://support.spotify.com/pt-pt/"
+            label="Suporte"
+          />
+
+          <HeaderLink
+            href="https://www.spotify.com/pt-pt/download/"
+            label="Baixar"
+          />
 
           <div className="border-s h-[25] w-1 ml-4 mr-4"></div>
 
@@ -68,12 +65,9 @@ export const Header: React.FC = () => {
             </svg>{" "}
             Intalar aplicativo
           </button>
-          <a
-            href="#"
-            className="hover:scale-[1.04] font-bold text-sm text-[#b3b3b3] hover:text-white transition-colors duration-220 ease-in-out ml-5"
-          >
-            Inscrever-se
-          </a>
+
+          <HeaderLink href="#" label="Inscrever-se" classNames="ml-5 text-sm" />
+
           <button
             role="button"
             className="ml-2 rounded-full font-bold bg-white text-black h-12 w-28 flex items-center justify-center gap-2 cursor-pointer hover:scale-[1.04] transition-colors duration-220 ease-in-out"
