@@ -1,6 +1,8 @@
-export const MainContent: React.FC = () => {
+import "./styles.css";
+
+export const NowPlayingBar: React.FC = () => {
   return (
-    <main className="flex-1 bg-gray-800 text-white p-6">
+    <main className="now-playing-bar flex-1 bg-gray-800 text-white p-6">
       <h2 className="text-2xl font-bold mb-4">Featured Playlists</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {[...Array(8)].map((_, index) => (

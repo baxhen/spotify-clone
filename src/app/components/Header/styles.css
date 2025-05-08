@@ -1,3 +1,7 @@
+.global-nav {
+  grid-area: global-nav;
+}
+
 .link-button {
   color: var(--text-subdued);
 }

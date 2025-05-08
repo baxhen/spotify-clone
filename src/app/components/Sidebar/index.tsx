@@ -1,5 +1,7 @@
 import { Home, Library, PlusSquare } from "lucide-react";
 
+import "./styles.css";
+
 export const Sidebar: React.FC = () => {
   return (
     <aside className="bg-gray-900 text-white w-64 p-4 space-y-6">
