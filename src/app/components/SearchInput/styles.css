@@ -1,0 +1,22 @@
+.search-input {
+}
+.search-input:hover input {
+  background-color: var(--background-elevated-highlight);
+}
+
+.search-input:hover .kbd-group {
+  opacity: 1;
+}
+.search-input:hover .search-icon {
+  color: #fff;
+}
+
+.kbd-group {
+  opacity: 0;
+}
+
+.shortcut {
+  box-shadow: 0 1px 0 var(--background-base),
+    0 0 0 1px var(--essential-subdued) inset;
+  color: var(--text-subdued);
+}

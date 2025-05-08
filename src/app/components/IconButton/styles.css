@@ -1,0 +1,9 @@
+.icon-button {
+  background-color: var(--background-elevated-base);
+  fill: var(--text-subdued);
+}
+
+.icon-button:hover {
+  background-color: var(--background-elevated-highlight);
+  fill: #fff;
+}
