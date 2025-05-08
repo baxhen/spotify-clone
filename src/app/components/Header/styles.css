@@ -1,0 +1,7 @@
+.link-button {
+  color: var(--text-subdued);
+}
+
+.link-button svg {
+  fill: var(--text-subdued);
+}

@@ -1,9 +1,14 @@
 import Link from "next/link";
 import "./styles.css";
+import { classes } from "@spotify/app/utils/classes";
 
-export const Logo: React.FC = () => {
+interface LogoProps {
+  classNames?: string;
+}
+
+export const Logo: React.FC<LogoProps> = ({ classNames }) => {
   return (
-    <Link href="#" className="flex items-center">
+    <Link href="#" className={classes("flex items-center", classNames)}>
       <svg
         role="img"
         viewBox="0 0 24 24"
