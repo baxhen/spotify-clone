@@ -1,7 +1,7 @@
-import { Logo } from "@spotify/app/components/Logo";
-import { IconButton } from "@spotify/app/components/IconButton";
-import { SearchInput } from "@spotify/app/components/SearchInput";
-import { HeaderLink } from "@spotify/app/components/HeaderLink";
+import { Logo } from "@spotify/components/Logo";
+import { IconButton } from "@spotify/components/IconButton";
+import { SearchInput } from "@spotify/components/SearchInput";
+import { HeaderLink } from "@spotify/components/HeaderLink";
 
 import "./styles.css";
 

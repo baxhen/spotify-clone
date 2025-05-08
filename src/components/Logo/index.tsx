@@ -1,6 +1,6 @@
 import Link from "next/link";
 import "./styles.css";
-import { classes } from "@spotify/app/utils/classes";
+import { classes } from "@spotify/utils/classes";
 
 interface LogoProps {
   classNames?: string;

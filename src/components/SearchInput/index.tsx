@@ -1,5 +1,5 @@
-import { classes } from "@spotify/app/utils/classes";
-import { IconButton } from "@spotify/app/components/IconButton";
+import { classes } from "@spotify/utils/classes";
+import { IconButton } from "@spotify/components/IconButton";
 import { Search } from "lucide-react";
 
 import "./styles.css";

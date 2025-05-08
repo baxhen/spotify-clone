@@ -2,11 +2,11 @@
 
 import React from "react";
 import Head from "next/head";
-import { Header } from "@spotify/app/components/Header";
-import { Sidebar } from "@spotify/app/components/Sidebar";
-import { MainView } from "@spotify/app/components/MainView";
-import { NowPlayingBar } from "@spotify/app/components/NowPlayingBar";
-import { useSearchShortcut } from "@spotify/app/hooks/useSearchShortcut";
+import { Header } from "@spotify/components/Header";
+import { Sidebar } from "@spotify/components/Sidebar";
+import { MainView } from "@spotify/components/MainView";
+import { NowPlayingBar } from "@spotify/components/NowPlayingBar";
+import { useSearchShortcut } from "@spotify/hooks/useSearchShortcut";
 
 export default function Home() {
   useSearchShortcut();

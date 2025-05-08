@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { HTMLAttributeAnchorTarget } from "react";
 import { Url } from "next/dist/shared/lib/router/router";
-import { classes } from "@spotify/app/utils/classes";
+import { classes } from "@spotify/utils/classes";
 
 import "./styles.css";
 

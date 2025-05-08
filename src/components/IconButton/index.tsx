@@ -1,4 +1,4 @@
-import { classes } from "@spotify/app/utils/classes";
+import { classes } from "@spotify/utils/classes";
 import "./styles.css";
 
 interface IconButtonProps {

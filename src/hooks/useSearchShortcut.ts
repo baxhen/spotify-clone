@@ -1,4 +1,4 @@
-import { useKeyPress } from "@spotify/app/hooks/useKeyPress";
+import { useKeyPress } from "@spotify/hooks/useKeyPress";
 
 export const useSearchShortcut = () => {
   return useKeyPress({
