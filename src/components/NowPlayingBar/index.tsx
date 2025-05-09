@@ -60,6 +60,8 @@ export const NowPlayingBar: React.FC<NowPlayingBarProps> = ({
         <div className="flex items-center space-x-3 w-[30%] min-w-[180px]">
           <div className="relative">
             <Image
+              width={180}
+              height={180}
               src={song.image}
               alt="Album cover for Oh Lord, You're Beautiful by Keith Green"
               className="w-12 h-12 rounded-md"

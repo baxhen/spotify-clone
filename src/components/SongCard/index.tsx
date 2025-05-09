@@ -12,9 +12,11 @@ export const SongCard: React.FC<SongCardProps> = ({ song, onPlay }) => {
     <div className="song-card flex flex-col cursor-pointer hover:bg-[var(--background-highlight)] rounded-lg transition-colors p-3 min-h-[260px]">
       <div className="relative mb-2">
         <Image
+          width={170}
+          height={170}
           src={song.image}
           alt={`Album cover for ${song.title} by ${song.artist}`}
-          className="w-full aspect-square object-cover rounded-md h-[170px] w-[170px]"
+          className="w-full aspect-square object-cover rounded-md"
         />
         <div className="play absolute opacity-0 transition-all duration-220 ease-in-out rounded-md right-2 bottom-0">
           <button

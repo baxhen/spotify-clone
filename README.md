@@ -8,9 +8,9 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/baxhen/spotify-clone?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/baxhen/spotify-clone?style=for-the-badge)
 
-> [Clone Spotify Desktop](https://tiny-macaron-3edcdf.netlify.app)
+> [Clone Spotify Desktop](https://spotify-clone-baxhen.netlify.app/)
 
-> Template de portifólio pessoal.
+> Spotify Clone
 
 ## 🚀 Funcionalidades
 
