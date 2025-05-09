@@ -9,9 +9,6 @@ import {
   Song,
 } from "@spotify/lib/features/now-playing/playNowSlice";
 
-// Music data
-const topSongs = [];
-
 const footerLinks = {
   empresa: ["Sobre", "Empregos", "For the Record"],
   comunidades: [

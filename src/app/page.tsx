@@ -16,9 +16,9 @@ import {
 import { useAppDispatch, useAppSelector } from "@spotify/hooks/redux";
 
 export default function Home() {
-  const [currentTime, setCurrentTime] = React.useState("0:03");
-  const [totalTime, setTotalTime] = React.useState("4:16");
-  const [progress, setProgress] = React.useState(1);
+  const [currentTime] = React.useState("0:03");
+  const [totalTime] = React.useState("4:16");
+  const [progress] = React.useState(1);
 
   const song = useAppSelector(selectCurrentSong);
   const isPlaying = useAppSelector(selectIsPlaying);

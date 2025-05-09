@@ -11,9 +11,11 @@ import {
   Volume2,
   CheckCircle2,
 } from "lucide-react";
+import Image from "next/image";
+
+import { Song } from "@spotify/lib/features/now-playing/playNowSlice";
 
 import "./styles.css";
-import { Song } from "@spotify/lib/features/now-playing/playNowSlice";
 
 interface NowPlayingBarProps {
   currentTime: string;
@@ -57,7 +59,7 @@ export const NowPlayingBar: React.FC<NowPlayingBarProps> = ({
         {/* Album art and song info */}
         <div className="flex items-center space-x-3 w-[30%] min-w-[180px]">
           <div className="relative">
-            <img
+            <Image
               src={song.image}
               alt="Album cover for Oh Lord, You're Beautiful by Keith Green"
               className="w-12 h-12 rounded-md"

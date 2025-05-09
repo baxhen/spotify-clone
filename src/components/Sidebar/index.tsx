@@ -1,5 +1,5 @@
-import { Plus, Globe } from "lucide-react";
 import { SuggestionCard } from "@spotify/components/SuggestionCard";
+import { Globe } from "lucide-react";
 
 import "./styles.css";
 

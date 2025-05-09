@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { useAppSelector } from "@spotify/hooks/redux";
 import type { RootState } from "@spotify/lib/store";
 
 export interface Song {

@@ -1,7 +1,6 @@
-import Link from "next/link";
-import "./styles.css";
-import { classes } from "@spotify/utils/classes";
+import Image from "next/image";
 import { Song } from "@spotify/lib/features/now-playing/playNowSlice";
+import "./styles.css";
 
 interface SongCardProps {
   song: Song;
@@ -12,7 +11,7 @@ export const SongCard: React.FC<SongCardProps> = ({ song, onPlay }) => {
   return (
     <div className="song-card flex flex-col cursor-pointer hover:bg-[var(--background-highlight)] rounded-lg transition-colors p-3 min-h-[260px]">
       <div className="relative mb-2">
-        <img
+        <Image
           src={song.image}
           alt={`Album cover for ${song.title} by ${song.artist}`}
           className="w-full aspect-square object-cover rounded-md h-[170px] w-[170px]"
