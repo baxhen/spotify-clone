@@ -1,8 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
+import playNowReducer from "./features/now-playing/playNowSlice";
 
 export const makeStore = () => {
   return configureStore({
-    reducer: {},
+    reducer: {
+      playNowReducer,
+    },
   });
 };
 

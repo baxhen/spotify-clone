@@ -1,20 +1,14 @@
 import Link from "next/link";
 import "./styles.css";
 import { classes } from "@spotify/utils/classes";
-
-interface Song {
-  id: number;
-  title: string;
-  artist: string;
-  image: string;
-  explicit?: boolean;
-}
+import { Song } from "@spotify/lib/features/now-playing/playNowSlice";
 
 interface SongCardProps {
   song: Song;
+  onPlay: (song: Song) => void;
 }
 
-export const SongCard: React.FC<SongCardProps> = ({ song }) => {
+export const SongCard: React.FC<SongCardProps> = ({ song, onPlay }) => {
   return (
     <div className="song-card flex flex-col cursor-pointer hover:bg-[var(--background-highlight)] rounded-lg transition-colors p-3 min-h-[260px]">
       <div className="relative mb-2">
@@ -29,6 +23,7 @@ export const SongCard: React.FC<SongCardProps> = ({ song }) => {
             aria-label={`Tocar ${song.title} de ${song.artist}`}
             data-encore-id="buttonPrimary"
             data-is-icon-only="true"
+            onClick={() => onPlay(song)}
             className="h-12 w-12 bg-[var(--background-button-base)] rounded-full flex items-center justify-center hover:scale-[1.04] transition-transform cursor-pointer active:bg-[var(--background-button-press)]"
           >
             <div className="h-6 w-6">
