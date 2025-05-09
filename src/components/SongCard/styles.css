@@ -1,0 +1,6 @@
+.song-card:hover {
+}
+.song-card:hover .play {
+  opacity: 1;
+  bottom: 0.25rem;
+}
