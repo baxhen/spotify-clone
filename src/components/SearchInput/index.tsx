@@ -12,6 +12,7 @@ export const SearchInput: React.FC<SearchInputProps> = ({
   classNames,
   ...inputProps
 }) => {
+  const { value } = inputProps;
   return (
     <div className={classes("search-input h-11", classNames)}>
       <div className="relative h-full relative">
@@ -23,7 +24,11 @@ export const SearchInput: React.FC<SearchInputProps> = ({
         />
         <div className="flex pl-3 absolute left-7 top-1/2 transform -translate-y-1/2 pointer-events-none">
           <span className="invisible">{inputProps.placeholder}</span>
-          <span className="flex gap-1 pl-3 kbd-group transition-opacity duration-220 ease-in-out">
+          <span
+            className={`flex gap-1 pl-3 kbd-group transition-opacity duration-220 ease-in-out ${
+              value ? "opacity-0!" : "opacity-100"
+            }`}
+          >
             <kbd className="shortcut rounded-sm px-2">Ctrl</kbd>
             <kbd className="shortcut rounded-sm px-2">K</kbd>
           </span>

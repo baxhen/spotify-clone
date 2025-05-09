@@ -15,6 +15,7 @@ interface NowPlayingState {
   songs: Song[];
   currentSong: Song | null;
   isPlaying: boolean;
+  filterTerm: string;
 }
 
 // Define the initial state using that type
@@ -149,6 +150,7 @@ const initialState: NowPlayingState = {
   ],
   currentSong: null,
   isPlaying: false,
+  filterTerm: "",
 };
 
 export const counterSlice = createSlice({
@@ -166,14 +168,31 @@ export const counterSlice = createSlice({
     pauseSong: (state) => {
       state.isPlaying = false;
     },
+    setFilterTerm: (state, action: PayloadAction<string>) => {
+      state.filterTerm = action.payload;
+    },
+    clearFilterTerm: (state) => {
+      state.filterTerm = "";
+    },
   },
 });
 
-export const { changePlayNowSong, pauseSong, playSong } = counterSlice.actions;
+export const {
+  changePlayNowSong,
+  pauseSong,
+  playSong,
+  setFilterTerm,
+  clearFilterTerm,
+} = counterSlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type
 
-export const selectSongs = (state: RootState) => state.playNowReducer.songs;
+export const selectSongs = (state: RootState) =>
+  state.playNowReducer.songs.filter((song) =>
+    song.title
+      .toLowerCase()
+      .includes(state.playNowReducer.filterTerm.toLowerCase())
+  );
 
 export const selectCurrentSong = (state: RootState) =>
   state.playNowReducer.currentSong;

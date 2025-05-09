@@ -1,11 +1,29 @@
+import React from "react";
+import { debounce } from "lodash";
+
 import { Logo } from "@spotify/components/Logo";
 import { IconButton } from "@spotify/components/IconButton";
 import { SearchInput } from "@spotify/components/SearchInput";
 import { HeaderLink } from "@spotify/components/HeaderLink";
+import { useAppDispatch } from "@spotify/hooks/redux";
+import { setFilterTerm } from "@spotify/lib/features/now-playing/playNowSlice";
 
 import "./styles.css";
 
 export const Header: React.FC = () => {
+  const [search, setSearch] = React.useState("");
+  const dispatch = useAppDispatch();
+
+  const debouncedSearch = React.useRef(
+    debounce((search: string) => {
+      dispatch(setFilterTerm(search));
+    }, 300)
+  ).current;
+
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(event.target.value);
+    debouncedSearch(event.target.value);
+  };
   return (
     <header className="global-nav bg-black text-white shadow-md relative h-[64px] flex items-center">
       <div className="mx-auto flex justify-between items-center w-full">
@@ -26,6 +44,8 @@ export const Header: React.FC = () => {
             </IconButton>
 
             <SearchInput
+              onChange={handleSearchChange}
+              value={search}
               placeholder="O que você quer ouvir?"
               classNames="flex-1 ml-2 w-[474px]"
             />
